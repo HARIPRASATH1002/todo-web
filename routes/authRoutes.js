@@ -102,7 +102,7 @@ router.post("/register", async (req, res) => {
                 userId: newUser._id,
                 email: newUser.email
             },
-            "mysecretkey",
+            process.env.JWT_SECRET,
             {
                 expiresIn: "1hr"
             }
@@ -190,7 +190,7 @@ router.post("/login", async (req, res) => {
                 userId: user._id,
                 email: user.email
             },
-            "mysecretkey",
+             process.env.JWT_SECRET,
             {
                 expiresIn: "1hr"
             }
