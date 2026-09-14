@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Todo App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <h1>Create Account</h1>
+
+            <p class="subtitle">
+                Register to start managing your tasks
+            </p>
+
+            <form id="registerForm">
+
+                <div class="input-group">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        maxlength="25"
+                        required
+                    >
+                       <p id="nameError" class="error-message"></p>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        maxlength="25"
+                        required
+                    >
+                       <p id="emailError" class="error-message"></p>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        minlength="8"
+                        maxlength="15"
+                        required
+                    >
+                    <p id="passwordError" class="error-message"></p>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                </div>
+                <p id="registerMessage" class="register-message"></p>
+
+                <button type="submit" class="primary-btn">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="switch-page">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

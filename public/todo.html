@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Todo List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <div class="todo-header">
+
+    <div>
+        <h1>My To-Do List</h1>
+
+        <p class="todo-subtitle">
+            Manage your daily tasks
+        </p>
+    </div>
+
+    <div class="profile-menu">
+
+        <button class="profile-icon" onclick="toggleProfile()">
+            HS
+        </button>
+
+        <div class="profile-dropdown">
+            <button onclick="logout()">
+                Logout
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+       <div class="add-task-box">
+
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="Task title"
+    >
+
+    <textarea
+        id="descriptionInput"
+        placeholder="Task description"
+    ></textarea>
+
+    <input
+        type="date"
+        id="dueDateInput"
+    >
+
+    <select id="priorityInput">
+        <option value="" selected disabled>Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+
+    <select id="categoryInput">
+        <option value="" selected disabled>Category</option>
+        <option value="Other">Other</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+    </select>
+
+    <p id="taskError" class="error-message"></p>
+<p id="taskMessage" class="register-message"></p>
+
+    <button
+        onclick="addTask()"
+        class="add-btn"
+    >
+        + Add Task
+    </button>
+
+</div>
+
+
+        <div class="tasks-section">
+
+            <h2>My Tasks</h2>
+            <div id="editTaskBox" style="display: none;">
+
+    <h2>Edit Task</h2>
+
+    <input
+        type="text"
+        id="editTitleInput"
+        placeholder="Task title"
+    >
+
+    <textarea
+        id="editDescriptionInput"
+        placeholder="Task description"
+    ></textarea>
+
+    <input
+        type="date"
+        id="editDueDateInput"
+    >
+
+    <select id="editPriorityInput">
+        <option value="" selected disabled>Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+
+    <select id="editCategoryInput">
+        <option value="" selected disabled>Category</option>
+        <option value="Other">Other</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+    </select>
+
+    <button
+        onclick="updateTask()"
+        class="add-btn"
+    >
+        Update Task
+    </button>
+
+    <button
+        onclick="cancelEdit()"
+        type="button"
+    >
+        Cancel
+    </button>
+
+</div>
+
+            <div id="taskList"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="todoss.js"></script>
+
+</body>
+
+</html>
